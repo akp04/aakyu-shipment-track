@@ -1,0 +1,70 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.aakyu_image {
+    margin-left: auto;
+    margin-right: auto;
+}
+.header1 {
+    text-align: center;
+}
+.buttons1 {
+    padding: 20px;
+}
+.client_div {
+    text-align: center;
+}
+#btn_submit_client {
+    margin: 20px;
+}
+.client_div_output {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 40%;
+    padding: 20px;
+}
+#admin_div {
+    text-align: center;
+}
+#btn_submit_admin, #username_div, #password_div, #btn_ask_for_update {
+    margin: 10px;
+}
+#admin_div_output {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    
+}
+#admin_div_output_new_entry, #admin_div_output_update, #admin_div_output_delete {
+    text-align: center;
+}
+.container {
+    width: 40%;
+}
+#btn_create_intoDb, #btn_update_fromDb {
+    margin: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+.container {
+    width: 60%;
+}
+.client_div_output {
+    width: 60%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .container {
+        width: 90%;
+    }
+    
+.client_div_output {
+    width: 80%;
+}
+    }

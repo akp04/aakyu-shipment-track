@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Aakyu-Tracking</title>
+</head>
+<body>
+  <div class="aakyu_image">
+    <img src="./logo_aakyu.png" class="img-responsive aakyu_image" />
+    <hr>
+  </div>
+    <div class="header1" id="header1">
+      <h4><strong>TRACK AND TRACE</strong></h4>
+        <!-- <h1>Login As</h1> -->
+        <hr>
+        <div class="buttons1">
+            <button class="btn btn-default" id="btn_client">Client</button>
+            <button class="btn btn-default" id="btn_admin">Admin</button>
+        </div>
+    </div>
+
+    <div class="client_div" id="client_div">
+        <!-- <h2>Client</h2>
+        <hr> -->
+        <div class="container">
+          <div class="form-group">
+            <label for="BLNO">BLNO :</label>
+            <input type="text" class="form-control" id="BLNO" placeholder="Enter BLNO" name="email">
+          </div>
+            <button class="btn btn-default" id="btn_submit_client">Search</button>
+        </div>
+     
+    </div>
+
+    <div class="client_div_output" id="client_div_output">
+
+        <p><strong>BLNO :</strong> <span id="client_blno_value"></span> </p>
+
+        <p><strong>CONTAINER NO :</strong> <span id="client_cno_value"></span> </p>
+
+        <p><strong>SHIPPER :</strong> <span id="client_shipper_value"></span> </p>                                                                                                                                                
+
+        <p><strong>PORT :</strong><span id="client_port_value"></span></p>
+            
+        <p><strong>PKGS : </strong> <span id="client_pkg_value"></span></p>
+            
+        <p><strong>GR.WT :</strong> <span id="client_grosswt_value"></span></p>
+            
+        <p><strong>SB.NO :</strong> <span id="client_shippingbill_value"></span></p>
+            
+        <p><strong>ST.DT :</strong> <span id="client_stuffingdate_value"></span></p>
+            
+        <p><strong>RAIL OUT DATE :</strong> <span id="client_railoutdate_value"></span> </p>
+
+        <p><strong>TRAIN NO :</strong> <span id="client_trainno_value"></span> </p>
+
+        <p><strong>WAGON NO :</strong> <span id="client_wagonno_value"></span> </p>
+
+        <p><strong>PORT OF LOADING :</strong> <span id="client_portofloading_value"></span> </p>
+
+        <p><strong>VESSEL VOYAGE :</strong> <span id="client_vesselname_value"></span> </p>
+
+        <p><strong>ON BOARD DATE :</strong> <span id="client_sobdate_value"></span> </p>
+
+        <p><strong>TRANSHIPMENT VESSEL VOYAGE :</strong> <span id="client_transvesselname_value"></span> </p>
+
+        <p><strong>VESSEL DATE :</strong> <span id="client_transvesseldate_value"></span> </p>
+
+        <p><strong>ETA DESTINATION :</strong> <span id="client_eta_value"></span> </p>
+
+        <p><strong>D/O :</strong> <span id="client_do_value"></span> </p>
+                             
+     </div>
+
+    <div class="admin_div" id="admin_div">
+        <!-- <h2>Administrator</h2>
+        <hr> -->
+        <div class="container" id="form1">
+        <div id="username_div">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username"><br>
+        </div>
+        <div id="password_div">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password"><br>
+        </div>
+        <button class="btn btn-default" id="btn_submit_admin">Submit</button>
+        </div>
+    </div>
+
+    <div id="admin_div_output">
+        <!-- <h3>What action do you want to perform</h3>
+        <hr> -->
+        <button id="btn_new_entry" class="btn btn-default">New entry</button>
+        <button id="btn_update_entry" class="btn btn-default">Update Entry</button>
+        <button id="btn_delete_entry" class="btn btn-default">Delete Entry</button>
+    </div>
+
+    <div class="" id="admin_div_output_new_entry">
+        <h3>Enter Details for new entry -</h3>
+        <hr>
+        <div class="container">
+              <div class="form-group">
+                <label for="create_blno">BLNO:</label>
+                <input type="text" class="form-control" id="create_blno" placeholder="Enter BLNO" name="email">
+              </div>
+              <div class="form-group">
+                <label for="create_email">Email of client:</label>
+                <input type="email" class="form-control" id="create_email" placeholder="Enter email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="create_cno">Container No. :</label>
+                <input type="text" class="form-control" id="create_cno" placeholder="Enter Container No" name="email">
+              </div>
+              <div class="form-group">
+                <label for="create_shipper">Shipper :</label>
+                <input type="text" class="form-control" id="create_shipper" placeholder="Enter Shipper" name="pwd">
+              </div>
+              <div class="form-group">
+                <label for="create_port">PORT:</label>
+                <input type="text" class="form-control" id="create_port" placeholder="Enter PORT">
+              </div>
+              <div class="form-group">
+                <label for="create_pkg">PKGS:</label>
+                <input type="text" class="form-control" id="create_pkg" placeholder="Enter PKGS">
+              </div>
+              <div class="form-group">
+                <label for="create_grosswt">Gross Wt:</label>
+                <input type="text" class="form-control" id="create_grosswt" placeholder="Enter Gross Wt">
+              </div>
+              <div class="form-group">
+                <label for="create_shippingbill">Shipping Bill</label>
+                <input type="text" class="form-control" id="create_shippingbill" placeholder="Enter Shipping Bill">
+              </div>
+              <div class="form-group">
+                <label for="create_stuffdate">Stuffing Date / Place: </label>
+                <input type="text" class="form-control" id="create_stuffdate" placeholder="Enter Stuff Date and Place">
+              </div>
+              <div class="form-group">
+                <label for="create_portofloading">Port of Loading: </label>
+                <input type="text" class="form-control" id="create_portofloading" placeholder="Enter Port of Loading">
+              </div>
+              <div style="background-color: aliceblue;">
+                <hr>
+                <h3 >Railout Details</h3>
+                <hr>
+              </div>
+              <div class="form-group">
+                <label for="create_railoutdate">Railout Date: </label>
+                <input type="text" class="form-control" id="create_railoutdate" placeholder="Enter Railout Date">
+              </div>
+              <div class="form-group">
+                <label for="create_traino">Train No. : </label>
+                <input type="text" class="form-control" id="create_traino" placeholder="Enter Train No.">
+              </div>
+              <div class="form-group">
+                <label for="create_wagono">Wagon No. : </label>
+                <input type="text" class="form-control" id="create_wagono" placeholder="Enter Wagon no. ">
+              </div>
+              <div style="background-color: aliceblue;">
+                <hr>
+                <h3 >On Board Confirmation</h3>
+                <hr>
+              </div>
+              <div class="form-group">
+                <label for="create_vesselname">Vessel Voyage : </label>
+                <input type="text" class="form-control" id="create_vesselname" placeholder="Enter Vessel Name">
+              </div>
+              <div class="form-group">
+                <label for="create_sobdate">SOB Date : </label>
+                <input type="text" class="form-control" id="create_sobdate" placeholder="Enter SOB Date ">
+              </div>
+              
+              <div style="background-color: aliceblue;">
+                <hr>
+                <h3 >Transhipment</h3>
+                <hr>
+              </div>
+              <div class="form-group">
+                <label for="create_transhippmentvesselname">Vessel Voyage : </label>
+                <input type="text" class="form-control" id="create_transhippmentvesselname" placeholder="Enter Vessel Name">
+              </div> 
+              <div class="form-group">
+                <label for="create_transhippmentvesseldate"> Vessel Date : </label>
+                <input type="text" class="form-control" id="create_transhippmentvesseldate" placeholder="Enter Vessel Date">
+              </div> 
+              <hr>
+              <div class="form-group">
+                <label for="create_eta">ETA Destination : </label>
+                <input type="text" class="form-control" id="create_eta" placeholder="Enter ETA">
+              </div> 
+              <div class="form-group">
+                <label for="create_do">D/O : </label>
+                <input type="text" class="form-control" id="create_do" placeholder="Enter D/O">
+              </div> 
+              <button id="btn_create_intoDb" class="btn btn-success">Submit</button>
+          </div>
+    </div>
+
+    <!-- UPDATION -->
+    <div class="" id="admin_div_output_update">
+      <div id="input_blno_div">
+        <h3>Enter the BLNO. you want to update</h3>
+        <hr>
+        <div class="container">
+            <div class="form-group">
+            <label for="input_admin_update_blno">BLNO : </label>
+            <input type="text" id="input_admin_update_blno" class="form-control">
+            
+            <button class="btn btn-default" id="btn_ask_for_update">Send</button>
+
+            </div>
+        </div>
+      </div>
+            <div id="show_static_blno_div">
+              <div  class="container">
+                <h4>BLNO. -  <span id="show_static_blno_span"></span></h4>
+                <hr>
+              </div>
+            </div>
+            
+            <div class="container" id="appear_update_details">
+
+              <div class="form-group">
+                <label for="update_email">Email of client:</label>
+                <input type="email" class="form-control" id="update_email" placeholder="Enter email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="update_cno">Container No. :</label>
+                <input type="text" class="form-control" id="update_cno" placeholder="Enter Container No" name="email">
+              </div>
+              <div class="form-group">
+                <label for="update_shipper">Shipper :</label>
+                <input type="text" class="form-control" id="update_shipper" placeholder="Enter Shipper" name="pwd">
+              </div>
+              <div class="form-group">
+                <label for="update_port">PORT:</label>
+                <input type="text" class="form-control" id="update_port" placeholder="Enter PORT">
+              </div>
+              <div class="form-group">
+                <label for="update_pkg">PKGS:</label>
+                <input type="text" class="form-control" id="update_pkg" placeholder="Enter PKGS">
+              </div>
+              <div class="form-group">
+                <label for="update_grosswt">Gross Wt:</label>
+                <input type="text" class="form-control" id="update_grosswt" placeholder="Enter Gross Wt">
+              </div>
+              <div class="form-group">
+                <label for="update_shippingbill">Shipping Bill</label>
+                <input type="text" class="form-control" id="update_shippingbill" placeholder="Enter Shipping Bill">
+              </div>
+              <div class="form-group">
+                <label for="update_stuffdate">Stuffing Date / Place: </label>
+                <input type="text" class="form-control" id="update_stuffdate" placeholder="Enter Stuff Date and Place">
+              </div>
+              <div class="form-group">
+                <label for="update_portofloading">Port of Loading: </label>
+                <input type="text" class="form-control" id="update_portofloading" placeholder="Enter Port of Loading">
+              </div>
+
+              <!-- comment adding extra-->
+            <div style="background-color: aliceblue;">
+                <hr>
+                <h3 >Railout Details</h3>
+                <hr>
+            </div>
+                <div class="form-group">
+                  <label for="update_railout">Railout Date: </label>
+                  <input type="text" class="form-control" id="update_railout" placeholder="Enter Railout Date">
+                </div>
+                <div class="form-group">
+                  <label for="update_train_no">Train No. : </label>
+                  <input type="text" class="form-control" id="update_train_no" placeholder="Enter Train No.">
+                </div>
+                <div class="form-group">
+                  <label for="update_wagon_no">Wagon No. : </label>
+                  <input type="text" class="form-control" id="update_wagon_no" placeholder="Enter Wagon no. ">
+                </div>
+                <div style="background-color: aliceblue;">
+                  <hr>
+                  <h3 >On Board Confirmation</h3>
+                  <hr>
+                </div>
+                <div class="form-group">
+                  <label for="update_vessel_name">Vessel Voyage : </label>
+                  <input type="text" class="form-control" id="update_vessel_name" placeholder="Enter Vessel Name">
+                </div>
+                <div class="form-group">
+                  <label for="update_sob_date">SOB Date : </label>
+                  <input type="text" class="form-control" id="update_sob_date" placeholder="Enter SOB Date ">
+                </div>
+                
+                <div style="background-color: aliceblue;">
+                  <hr>
+                  <h3 >Transhipment</h3>
+                  <hr>
+                </div>
+                <div class="form-group">
+                  <label for="update_transhippment_name">Vessel Voyage : </label>
+                  <input type="text" class="form-control" id="update_transhippment_name" placeholder="Enter Vessel Name">
+                </div> 
+                <div class="form-group">
+                  <label for="update_transhippment_date">Vessel Date : </label>
+                  <input type="text" class="form-control" id="update_transhippment_date" placeholder="Enter Vessel Date">
+                </div> 
+                <hr>
+                <div class="form-group">
+                  <label for="update_eta">ETA Destination : </label>
+                  <input type="text" class="form-control" id="update_eta" placeholder="Enter ETA">
+                </div> 
+                <div class="form-group">
+                  <label for="update_do">D/O : </label>
+                  <input type="text" class="form-control" id="update_do" placeholder="Enter D/O">
+                </div> 
+                <button class="btn btn-primary" id="btn_update_fromDb">Update</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="" id="admin_div_output_delete">
+        <h3>Enter the BLNO. you want to delete</h3>
+        <hr>
+        <div class="container">
+            <div class="form-group">
+            <label for="">BLNO : </label>
+            <input  type="text" id="input_admin_del_blno" class="form-control">
+            </div>
+        </div>
+            <button class="btn btn-danger" id="btn_delete_fromDb">Delete</button>
+    </div>      
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
