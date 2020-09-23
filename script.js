@@ -35,6 +35,7 @@ document.getElementById("btn_submit_client").onclick = () => {
                     document.getElementById("client_blno_value").innerHTML = jsonArr[0].blno;
                     document.getElementById("client_pkg_value").innerHTML = jsonArr[0].pkg;
                     document.getElementById("client_cno_value").innerHTML = jsonArr[0].cno;
+                    document.getElementById("client_custom_seal_value").innerHTML = jsonArr[0].customseal;
                     document.getElementById("client_shipper_value").innerHTML = jsonArr[0].shipper;
                     document.getElementById("client_port_value").innerHTML = jsonArr[0].port;
                     document.getElementById("client_pkg_value").innerHTML = jsonArr[0].pkg;
@@ -118,6 +119,7 @@ document.getElementById("btn_new_entry").onclick = () => {
 
         var email = document.getElementById("create_email").value;
         var cno = document.getElementById("create_cno").value;
+        var customseal = document.getElementById("create_custom_seal").value;
         var shipper = document.getElementById("create_shipper").value;
         var port = document.getElementById("create_port").value;
         var pkg = document.getElementById("create_pkg").value;
@@ -156,6 +158,7 @@ document.getElementById("btn_new_entry").onclick = () => {
             blno: blno,
             email:email,
             cno:cno,
+            customseal:customseal,
             shipper:shipper,
             port:port,
             pkg:pkg,
@@ -227,6 +230,7 @@ document.getElementById("btn_update_fromDb").onclick = () => {
 
     var email = document.getElementById("update_email").value;
     var cno = document.getElementById("update_cno").value;
+    var customseal = document.getElementById("update_custom_seal").value;
     var shipper = document.getElementById("update_shipper").value;
     var port = document.getElementById("update_port").value;
     var pkg = document.getElementById("update_pkg").value;
@@ -267,6 +271,7 @@ document.getElementById("btn_update_fromDb").onclick = () => {
             blno: blno,
             email:email,
             cno:cno,
+            customseal:customseal,
             shipper:shipper,
             port:port,
             pkg:pkg,
@@ -300,6 +305,7 @@ const fill_update_values = (blno) => {
                 else{
     document.getElementById("update_email").value = jsonArr[0].email;
     document.getElementById("update_cno").value = jsonArr[0].cno;
+    document.getElementById("update_custom_seal").value = jsonArr[0].customseal;
     document.getElementById("update_shipper").value = jsonArr[0].shipper;
     document.getElementById("update_port").value = jsonArr[0].port;
     document.getElementById("update_pkg").value = jsonArr[0].pkg;
